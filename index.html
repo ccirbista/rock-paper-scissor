@@ -10,7 +10,12 @@
     <h1> Rock Paper Scissor </h1>
 
     <script>
-        console.log("Hello Rock Paper Scissor");
+        function getComputerChoice(){
+            let computerChoices = ["rock", "paper", "scissor"];
+            let computerChoice = computerChoices[Math.floor(Math.random()*computerChoices.length)];
+            return computerChoice;
+        }
+        console.log(getComputerChoice());
     </script>
     
 </body>
