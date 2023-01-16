@@ -15,7 +15,37 @@
             let computerChoice = computerChoices[Math.floor(Math.random()*computerChoices.length)];
             return computerChoice;
         }
-        console.log(getComputerChoice());
+        let computerChoice = getComputerChoice();
+        let playerChoice = prompt("Enter your choice: rock, paper, or scissor:");
+        playerChoice = playerChoice.toLowerCase();
+        function playRound(playerChoice){
+            if(playerChoice === computerChoice){
+            return "The round is Draw" + " Computer Choose: " + computerChoice + " Player Choose: " + playerChoice;
+            }
+            else if(playerChoice === 'rock' && computerChoice === 'paper'){
+                return "Computer Wins!!! " + computerChoice + " covers " + playerChoice;
+            }
+            else if(playerChoice === 'rock' && computerChoice === 'scissor'){
+                return "Player Wins!!! " + playerChoice + " crushes " + computerChoice;
+            }
+            else if(playerChoice === 'paper' && computerChoice === 'rock'){
+                return "Player Wins!!! " + playerChoice + " covers " + computerChoice;
+            }
+            else if(playerChoice === 'paper' && computerChoice === 'scissor'){
+                return "Computer Wins!!! " + computerChoice + " cuts " + playerChoice;
+            }
+            else if(playerChoice === 'scissor' && computerChoice === 'rock'){
+                return "Computer Wins!!! " + computerChoice + " crushes " + playerChoice;            
+            }
+            else if(playerChoice === 'scissor' && computerChoice === 'paper'){
+                return "Player Wins " + playerChoice + " cuts " + computerChoice;
+            }
+            else{
+                return "Invalid Choice: " + playerChoice + " Please choose between rock, paper, or scissor";
+            }
+        }
+        
+
     </script>
     
 </body>
